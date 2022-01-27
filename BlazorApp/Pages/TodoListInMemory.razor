@@ -18,7 +18,7 @@
     {
         <li>
             <input type="checkbox" @bind="@todo.IsDone" />
-            <input @bind="@todo.Title" />
+            <input @bind="@todo.Title" size="30" />
         </li>
     }
 </ul>
@@ -37,7 +37,7 @@
     protected override void OnInitialized()
     {
         // 초기 데이터 가져오기: 일반적으로 Database/Web API 사용
-        todos.Add(new TodoItem { Id = 1, Title = "할일1", IsDone = true });
+        todos.Add(new TodoItem { Id = 1, Title = "VisualAcademy에서 Blazor 공부", IsDone = true });
     }
 
     // 메서드: 버튼에 대한 저장 기능을 처리한다고하여 이벤트 처리기(Handler)로 표현
