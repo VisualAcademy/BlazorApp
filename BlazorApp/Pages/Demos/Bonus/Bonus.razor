@@ -24,7 +24,7 @@
         <span>@item.Amount.ToString("c0")</span>
         @*<input type="range" max="@totalBudget" step="1000" @bind="@item.Amount" @bind:event="oninput" />*@
         <input type="range" max="@(item.Amount + Remaining)" step="1000" @bind="@item.Amount" @bind:event="oninput"
-               style="width: @(100 * (item.Amount + Remaining) / totalBudget)%" />
+           style="width: @(100 * (item.Amount + Remaining) / totalBudget)%" />
     }
     <span>아빠: </span>
     <span>@Remaining.ToString("c0")</span>
@@ -41,7 +41,7 @@
 
     // 예산 항목
     List<BudgetItem> budgetItems = new List<BudgetItem>
-{
+    {
         new BudgetItem { Name = "아내" },
         new BudgetItem { Name = "아들" },
         new BudgetItem { Name = "공주" },
