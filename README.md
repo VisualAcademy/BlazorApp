@@ -16,3 +16,11 @@ BlazorApp 리포지토리를 관련 강좌는 다음 형태로 제공됩니다.
     * http://www.devlec.com
     
 
+## V3.1 ~ V5.0 소스 모음
+
+다음 리포지토리는 Blazor 강의 처음 작성시의 원본 소스 모음입니다.
+
+내용은 현재 리포지토리와 동일합니다. 
+
+https://github.com/VisualAcademy/BlazorApp.V31
+
