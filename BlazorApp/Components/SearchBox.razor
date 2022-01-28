@@ -20,8 +20,9 @@
         set
         {
             searchQuery = value;
-            debounceTimer.Stop();
-            debounceTimer.Start();
+
+            // 타이머 가동
+            debounceTimer.Stop(); debounceTimer.Start();
         }
     }
 
@@ -44,11 +45,17 @@
         debounceTimer.Elapsed += SearchHandler;
     }
 
+    /// <summary>
+    /// 검색 버튼 클릭했을 때 실행
+    /// </summary>
     protected void Search()
     {
         SearchQueryChanged.InvokeAsync(SearchQuery); // 부모의 메서드에 검색어 전달
     }
 
+    /// <summary>
+    /// 타이머에 의해서 실행
+    /// </summary>
     protected async void SearchHandler(object source, ElapsedEventArgs e)
     {
         await InvokeAsync(() => SearchQueryChanged.InvokeAsync(SearchQuery)); // 부모의 메서드에 검색어 전달
@@ -56,6 +63,6 @@
 
     public void Dispose()
     {
-        debounceTimer.Dispose();
+        debounceTimer.Dispose(); // 타이머 개체 소멸 
     }
 }
