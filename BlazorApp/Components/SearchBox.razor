@@ -1,5 +1,5 @@
 ﻿@using System.Timers
-@implements IDisposable 
+@implements IDisposable
 
 <div class="search">
     <i class="oi oi-eye"></i>
@@ -11,8 +11,8 @@
 자식: @SearchQuery
 
 @code {
-    private string searchQuery;
-    private Timer debounceTimer;
+    private string searchQuery; // 검색어 담을 그릇
+    private Timer debounceTimer; // 디바운스 타임: 응답 대기 시간(300밀리초)
 
     public string SearchQuery
     {
@@ -25,6 +25,7 @@
         }
     }
 
+    // 부모에서 전달된 기타 특성들을 모두 받아서 사용
     [Parameter(CaptureUnmatchedValues = true)]
     public IDictionary<string, object> AdditionalAttributes { get; set; }
 
