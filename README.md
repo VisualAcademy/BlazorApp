@@ -27,3 +27,10 @@ BlazorApp 리포지토리를 관련 강좌는 다음 형태로 제공됩니다.
 
 https://github.com/VisualAcademy/BlazorApp.V31
 
+
+## Hawaso 프로젝트
+
+다음 경로의 프로젝트는 ASP.NET Core + Blazor Server를 사용한 하나의 완성된 웹앱을 만들어 내는 Blazor Server 프로젝트 과정의 데모 소스입니다.
+
+* https://github.com/VisualAcademy/Hawaso
+
